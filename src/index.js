@@ -9,6 +9,7 @@ import {
    StoreRoute,
    StaffRoute,
    UserRoute,
+   AreaRoute,
 } from "./routes/index.js";
 
 dotenv.config();
@@ -31,6 +32,7 @@ app.use("/api/company", CompanyRoute);
 app.use("/api/store", StoreRoute);
 app.use("/api/staff", StaffRoute);
 app.use("/api/user", UserRoute);
+app.use("/api/area", AreaRoute);
 
 server.listen(port, () => {
    console.log(`Server is running on port ${port}`);
