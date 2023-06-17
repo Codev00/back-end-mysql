@@ -29,7 +29,8 @@ class areaModel {
 
    static async updateById(id, data) {
       try {
-         const sql = `UPDATE khuvuc SET TenKV = "${data.TenKV}", TrangThai = "${data.TrangThai}",  WHERE MaKV = ${id}`;
+         const { TenKV, TrangThai, MaCH } = data;
+         const sql = `UPDATE khuvuc SET TenKV = "${TenKV}", TrangThai = "${TrangThai}", MaCH = ${MaCH} WHERE MaKV = '${id}'`;
          const [rows, _] = await db.execute(sql);
          return rows;
       } catch (error) {
