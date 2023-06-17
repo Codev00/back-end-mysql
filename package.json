@@ -1,0 +1,19 @@
+{
+   "name": "api",
+   "version": "1.0.0",
+   "main": "src/index.js",
+   "author": "Ken",
+   "license": "MIT",
+   "type": "module",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.1.4",
+      "express": "^4.18.2",
+      "morgan": "^1.10.0",
+      "mysql2": "^3.3.5",
+      "nodemon": "^2.0.22"
+   },
+   "scripts": {
+      "start": "nodemon src/index.js"
+   }
+}
