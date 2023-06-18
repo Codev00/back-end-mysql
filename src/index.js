@@ -13,6 +13,7 @@ import {
    TableRoute,
    CustomerRoute,
    ProductRoute,
+   BillRoute,
 } from "./routes/index.js";
 
 dotenv.config();
@@ -39,6 +40,7 @@ app.use("/api/area", AreaRoute);
 app.use("/api/table", TableRoute);
 app.use("/api/customer", CustomerRoute);
 app.use("/api/product", ProductRoute);
+app.use("/api/bill", BillRoute);
 
 server.listen(port, () => {
    console.log(`Server is running on port ${port}`);
