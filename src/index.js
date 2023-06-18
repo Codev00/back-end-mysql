@@ -4,7 +4,16 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import http from "http";
 
-import { CompanyRoute, StoreRoute, StaffRoute } from "./routes/index.js";
+import {
+   CompanyRoute,
+   StoreRoute,
+   StaffRoute,
+   UserRoute,
+   AreaRoute,
+   TableRoute,
+   CustomerRoute,
+   ProductRoute,
+} from "./routes/index.js";
 
 dotenv.config();
 
@@ -25,6 +34,11 @@ app.get("/", (req, res) => {
 app.use("/api/company", CompanyRoute);
 app.use("/api/store", StoreRoute);
 app.use("/api/staff", StaffRoute);
+app.use("/api/user", UserRoute);
+app.use("/api/area", AreaRoute);
+app.use("/api/table", TableRoute);
+app.use("/api/customer", CustomerRoute);
+app.use("/api/product", ProductRoute);
 
 server.listen(port, () => {
    console.log(`Server is running on port ${port}`);
