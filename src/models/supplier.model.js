@@ -1,6 +1,6 @@
 import db from "../config/db.js";
 
-class ingredientModel {
+class supplierModel {
    constructor({ TenNCC, DiaChi, sdt }) {
       this.TenNCC = TenNCC;
       this.DiaChi = DiaChi;
@@ -9,7 +9,7 @@ class ingredientModel {
 
    async create() {
       try {
-         const sql = `INSERT INTO nguyenlieu (TenNCC, DiaChi, sdt) VALUES ('${this.TenNCC}', '${this.DiaChi}', '${this.sdt}')`;
+         const sql = `INSERT INTO nhacungcap (TenNCC, DiaChi, sdt) VALUES ('${this.TenNCC}', '${this.DiaChi}', '${this.sdt}')`;
          const [rows, _] = await db.query(sql);
          return rows;
       } catch (error) {
@@ -19,7 +19,7 @@ class ingredientModel {
 
    static async findById(id) {
       try {
-         const sql = `SELECT * FROM nguyenlieu WHERE MaNCC = '${id}'`;
+         const sql = `SELECT * FROM nhacungcap WHERE MaNCC = '${id}'`;
          const [rows, _] = await db.query(sql);
          return rows;
       } catch (error) {
@@ -30,7 +30,7 @@ class ingredientModel {
    static async updateById(id, data) {
       try {
          const { TenNCC, DiaChi, sdt } = data;
-         const sql = `UPDATE nguyenlieu SET TenNCC = '${TenNCC}', DiaChi = '${DiaChi}', sdt = '${sdt}' WHERE MaNCC = '${id}'`;
+         const sql = `UPDATE nhacungcap SET TenNCC = '${TenNCC}', DiaChi = '${DiaChi}', sdt = '${sdt}' WHERE MaNCC = '${id}'`;
          const [rows, _] = await db.query(sql);
          return rows;
       } catch (error) {
@@ -40,7 +40,7 @@ class ingredientModel {
 
    static async deleteById(id) {
       try {
-         const sql = `DELETE FROM nguyenlieu WHERE MaNCC = '${id}'`;
+         const sql = `DELETE FROM nhacungcap WHERE MaNCC = '${id}'`;
          const [rows, _] = await db.query(sql);
          return rows;
       } catch (error) {
@@ -49,4 +49,4 @@ class ingredientModel {
    }
 }
 
-export default ingredientModel;
+export default supplierModel;
