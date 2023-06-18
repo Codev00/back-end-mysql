@@ -3,9 +3,9 @@ import express from "express";
 
 const router = express.Router();
 
-router.get("/:id", SupplierController.getIngredient);
-router.post("/create", SupplierController.createIngredient);
-router.put("/edit/:id", SupplierController.editIngredient);
-router.delete("/delete/:id", SupplierController.deleteIngredient);
+router.get("/:id", SupplierController.getSupplier);
+router.post("/create", SupplierController.createSupplier);
+router.put("/edit/:id", SupplierController.editSupplier);
+router.delete("/delete/:id", SupplierController.deleteSupplier);
 
 export default router;

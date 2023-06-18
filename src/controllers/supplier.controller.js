@@ -1,7 +1,7 @@
 import { SupplierModel } from "../models/index.js";
 
 const supplierController = {
-   createIngredient: async (req, res) => {
+   createSupplier: async (req, res) => {
       try {
          const { TenNCC, DiaChi, sdt } = req.body;
          const newIngredient = new SupplierModel({
@@ -16,7 +16,7 @@ const supplierController = {
       }
    },
 
-   getIngredient: async (req, res) => {
+   getSupplier: async (req, res) => {
       try {
          const { id } = req.params;
          const ingredient = await SupplierModel.findById(id);
@@ -26,7 +26,7 @@ const supplierController = {
       }
    },
 
-   editIngredient: async (req, res) => {
+   editSupplier: async (req, res) => {
       try {
          const { id } = req.params;
          const { TenNCC, DiaChi, sdt } = req.body;
@@ -41,7 +41,7 @@ const supplierController = {
       }
    },
 
-   deleteIngredient: async (req, res) => {
+   deleteSupplier: async (req, res) => {
       try {
          const { id } = req.params;
          await SupplierModel.deleteById(id);
