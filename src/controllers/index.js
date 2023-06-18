@@ -7,4 +7,4 @@ export { default as TableController } from "../controllers/table.controller.js";
 export { default as CustomerController } from "../controllers/customer.controller.js";
 export { default as ProductController } from "../controllers/product.controller.js";
 export { default as BillController } from "../controllers/bill.controller.js";
-// export { default as BillDetailController } from "../controllers/billDetail.controller.js";
+export { default as BillDetailController } from "../controllers/billDetail.controller.js";
