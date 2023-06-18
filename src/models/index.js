@@ -10,3 +10,4 @@ export { default as BillModel } from "../models/bill.model.js";
 export { default as BillDetailModel } from "../models/billDetail.model.js";
 export { default as SupplierModel } from "../models/supplier.model.js";
 export { default as MaterialModel } from "../models/material.model.js";
+export { default as InvoiceModel } from "../models/invoice.model.js";

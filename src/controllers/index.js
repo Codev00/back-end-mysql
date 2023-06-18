@@ -10,3 +10,4 @@ export { default as BillController } from "./bill.controller.js";
 export { default as BillDetailController } from "./billDetail.controller.js";
 export { default as SupplierController } from "./supplier.controller.js";
 export { default as MaterialController } from "./material.controller.js";
+export { default as InvoiceController } from "./invoice.controller.js";
