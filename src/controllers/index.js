@@ -5,3 +5,4 @@ export { default as UserController } from "../controllers/user.controller.js";
 export { default as AreaController } from "../controllers/area.controller.js";
 export { default as TableController } from "../controllers/table.controller.js";
 export { default as CustomerController } from "../controllers/customer.controller.js";
+export { default as ProductController } from "../controllers/product.controller.js";
