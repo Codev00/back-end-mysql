@@ -8,3 +8,4 @@ export { default as CustomerRoute } from "../routes/customer.route.js";
 export { default as ProductRoute } from "../routes/product.route.js";
 export { default as BillRoute } from "../routes/bill.route.js";
 export { default as BillDetailRoute } from "../routes/billDetail.route.js";
+export { default as IngredientRoute } from "../routes/ingredient.route.js";
