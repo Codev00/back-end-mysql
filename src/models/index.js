@@ -8,4 +8,5 @@ export { default as customerModel } from "../models/customer.model.js";
 export { default as ProductModel } from "../models/product.model.js";
 export { default as BillModel } from "../models/bill.model.js";
 export { default as BillDetailModel } from "../models/billDetail.model.js";
-export { default as SupplierModel } from "./supplier.model.js";
+export { default as SupplierModel } from "../models/supplier.model.js";
+export { default as MaterialModel } from "../models/material.model.js";
