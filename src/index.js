@@ -11,6 +11,7 @@ import {
    UserRoute,
    AreaRoute,
    TableRoute,
+   CustomerRoute,
 } from "./routes/index.js";
 
 dotenv.config();
@@ -35,6 +36,7 @@ app.use("/api/staff", StaffRoute);
 app.use("/api/user", UserRoute);
 app.use("/api/area", AreaRoute);
 app.use("/api/table", TableRoute);
+app.use("/api/customer", CustomerRoute);
 
 server.listen(port, () => {
    console.log(`Server is running on port ${port}`);
