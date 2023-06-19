@@ -18,6 +18,7 @@ import {
    SupplierRoute,
    MaterialRoute,
    InvoiceRoute,
+   InvoiceDetailRoute,
 } from "./routes/index.js";
 
 dotenv.config();
@@ -49,6 +50,7 @@ app.use("/api/billDetail", BillDetailRoute);
 app.use("/api/ingredient", SupplierRoute);
 app.use("/api/material", MaterialRoute);
 app.use("/api/invoice", InvoiceRoute);
+app.use("/api/invoiceDetail", InvoiceDetailRoute);
 
 server.listen(port, () => {
    console.log(`Server is running on port ${port}`);
