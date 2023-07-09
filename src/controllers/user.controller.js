@@ -3,25 +3,28 @@ import { UserModel } from "../models/index.js";
 const userController = {
    createUser: async (req, res) => {
       try {
-         const { username, password, admin, MaCH, MaNV } = req.body;
+         const { username, password, admin, MaCty, MaNV } = req.body;
          const newUser = new UserModel({
             username,
             password,
             admin,
-            MaCH,
+            MaCty,
             MaNV,
          });
-         await newUser.create();
-         res.status(200).json("Create user successfully");
+         const result = await newUser.create();
+         res.status(200).json({ message: "Create user successfully", newUser });
       } catch (error) {
          res.status(500).json(error.message);
       }
    },
    getUser: async (req, res) => {
       try {
-         const { username, password } = req.params;
+         const { username, password } = req.body;
          const result = await UserModel.findById(username);
-         res.status(200).json(result);
+         if (!result) {
+            return res.status(404).json("No User !!!");
+         }
+         res.status(200).json(result[0]);
       } catch (error) {
          res.status(500).json(error.message);
       }
@@ -30,12 +33,12 @@ const userController = {
    editUser: async (req, res) => {
       try {
          const { id } = req.params;
-         const { username, password, admin, MaCH, MaNV } = req.body;
+         const { username, password, admin, MaCty, MaNV } = req.body;
          await UserModel.updateById(id, {
             username,
             password,
             admin,
-            MaCH,
+            MaCty,
             MaNV,
          });
          res.status(200).json("Update user successfully");

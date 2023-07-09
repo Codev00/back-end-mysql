@@ -14,8 +14,11 @@ const billDetailController = {
             MaCH,
             MaHD,
          });
-         await billDetail.create();
-         res.status(200).json("Create bill detail success");
+         const result = await billDetail.create();
+         res.status(200).json({
+            result,
+            message: "Create bill detail success",
+         });
       } catch (error) {
          res.status(500).json({ message: error.message });
       }

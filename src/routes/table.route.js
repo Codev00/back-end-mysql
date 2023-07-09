@@ -7,5 +7,6 @@ router.post("/create", TableController.createTable);
 router.get("/:id", TableController.getTable);
 router.put("/edit/:id", TableController.editTable);
 router.delete("/delete/:id", TableController.deleteTable);
+router.put("/updateMaHD/:id", TableController.updateMaHD);
 
 export default router;

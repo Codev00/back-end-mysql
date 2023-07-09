@@ -1,11 +1,11 @@
-import { StoreModel } from "../models/index.js";
-
+import { StoreModel, UserModel } from "../models/index.js";
+import myMath from "../config/myMath.js";
 const storeController = {
    createStore: async (req, res) => {
       try {
          const { tenCH, DiaChi, sdt, MaCty } = req.body;
          const store = new StoreModel({ tenCH, DiaChi, sdt, MaCty });
-         const result = await store.create();
+         await store.create();
          res.status(200).json("Create store successfully");
       } catch (error) {
          res.status(500).json({ error: error.message });

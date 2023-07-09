@@ -22,6 +22,7 @@ class storeModel {
       try {
          const sql = `SELECT * FROM cuahang WHERE MaCH = ${id}`;
          const [rows, _] = await db.execute(sql);
+         console.log(rows);
          return rows;
       } catch (error) {
          console.log(error.message);

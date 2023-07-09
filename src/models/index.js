@@ -12,3 +12,4 @@ export { default as SupplierModel } from "../models/supplier.model.js";
 export { default as MaterialModel } from "../models/material.model.js";
 export { default as InvoiceModel } from "../models/invoice.model.js";
 export { default as InvoiceDetailModel } from "../models/invoiceDetail.model.js";
+export { default as QueryModel } from "../models/query.model.js";

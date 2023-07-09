@@ -12,3 +12,4 @@ export { default as SupplierController } from "./supplier.controller.js";
 export { default as MaterialController } from "./material.controller.js";
 export { default as InvoiceController } from "./invoice.controller.js";
 export { default as InvoiceDetailController } from "./invoiceDetail.controller.js";
+export { default as QueryController } from "./query.controller.js";

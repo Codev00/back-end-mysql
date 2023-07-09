@@ -22,7 +22,7 @@ const staffController = {
       try {
          const { id } = req.params;
          const result = await StaffModel.findById(id);
-         res.status(200).json(result);
+         res.status(200).json(result[0]);
       } catch (error) {
          res.status(500).json(error.message);
       }
